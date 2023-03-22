@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import Button from './Button'
 
-import './task.scss'
+import './task.css'
+
 
 export default function Task() {
 

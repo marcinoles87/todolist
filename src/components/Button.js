@@ -6,16 +6,18 @@ export default function Button(props) {
 
 const list = document.getElementsByClassName('.tasklist')
 
-console.log(list)
+
 
    const handleOnClick = () => {
     setTaskDone(
       taskDone = props.value
     )
-
+    const text = document.createTextNode('sss')
     const listElement = document.createElement('li')
-    listElement.innerText(taskDone)
-    console.log(listElement)
+    listElement.appendChild(text)
+    list.appendChild(listElement)
+    
+    
     
    }
 
