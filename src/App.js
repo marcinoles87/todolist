@@ -1,10 +1,11 @@
-
+import Task from './components/Task';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-    App
+    To Do App
+    <Task></Task>
     </div>
   );
 }
