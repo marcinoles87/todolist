@@ -12,12 +12,6 @@ const list = document.getElementsByClassName('.tasklist')
     setTaskDone(
       taskDone = props.value
     )
-    const text = document.createTextNode('sss')
-    const listElement = document.createElement('li')
-    listElement.appendChild(text)
-    list.appendChild(listElement)
-    
-    
     
    }
 
@@ -26,7 +20,8 @@ const list = document.getElementsByClassName('.tasklist')
         <button onClick={handleOnClick}>Add task</button>
         <h1 className='tasklist'>Your daily task:</h1>
         <ul>
-          <li>{props.value}</li>
+          <li>{props.value}</li><button>Done</button>
+        
         </ul>
     </div>
   )
