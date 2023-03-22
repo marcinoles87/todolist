@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Button from './Button'
 
+import './task.scss'
+
 export default function Task() {
 
   let [task,setTask] = useState();
@@ -12,10 +14,9 @@ export default function Task() {
 
   }
   return (
-    <div>
-        <h1>Add Task</h1>
+    <div  className='Task'>
+        <h2>Add Task</h2>
         <input onChange={handleOnChange}></input>
-        <p>{task}</p>
         <Button value={task}></Button>
     </div>
   )
