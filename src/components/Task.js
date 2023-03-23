@@ -11,6 +11,7 @@ export default function Task() {
   let [todos,setDodos] = useState([])
 
  
+ 
 
   const handleOnChange = (e) => {
     setTask(e.target.value)
@@ -18,12 +19,12 @@ export default function Task() {
   }
 
   const submitTodos = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     setDodos([
-      ...todos , {text : task , completed:false,}
+      ...todos , {text : task , completed:false}
     ])
 
-    console.log(todos)
+
   }
   return (
     <div  className='Task'>
