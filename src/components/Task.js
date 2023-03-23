@@ -4,15 +4,13 @@ import ToDo from './ToDo'
 import './task.css'
 
 
+
 export default function Task() {
 
   let [task,setTask] = useState();
   let [todos,setDodos] = useState([])
 
-  const handelOnClick = () => {
-    console.log('dziala')
-    
-  }
+ 
 
   const handleOnChange = (e) => {
     setTask(e.target.value)
