@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Button from './Button'
+import ToDo from './ToDo'
 
 import './task.css'
 
@@ -18,7 +18,7 @@ export default function Task() {
     <div  className='Task'>
         <h2>Add Task</h2>
         <input onChange={handleOnChange}></input>
-        <Button value={task}></Button>
+        <ToDo value={task}></ToDo>
     </div>
   )
 }
