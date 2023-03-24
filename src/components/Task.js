@@ -31,7 +31,7 @@ export default function Task() {
   return (
     <div  className='Task'>
         <h2>Add Task</h2>
-        <input onChange={handleOnChange} value={task}></input><button onClick={submitTodos} className='btn-add'>Add</button>
+        <input onChange={handleOnChange} ></input><button onClick={submitTodos} className='btn-add'>Add</button>
         <ToDo todos={todos} key={todos.id}></ToDo>
     </div>
   )

@@ -10,13 +10,11 @@ console.log(todos.id)
  
   return (
     <div className='todo'>
-      
-   <ul>
-          {todos.map( (todo) => {
-            return <To text={todo.text} id={todo.id}></To>
-          })}
-
-          </ul>
+      <ul>
+      {todos.map( (todo) => {
+        return <li key={todo.id}>{todo.text} <button>Add</button></li>
+      })}
+      </ul>
     </div>
   )
 }
