@@ -5,14 +5,12 @@ import './todo.css'
 
 export default function ToDo({todos}) {
 
-console.log(todos)
-console.log(todos.id)
- 
+
   return (
     <div className='todo'>
       <ul>
       {todos.map( (todo) => {
-        return <li key={todo.id}>{todo.text} <button>Add</button></li>
+        return <li key={todo.id}>{todo.text} <button className='btn-add'>Add</button><button className='btn-done'>Done</button></li>
       })}
       </ul>
     </div>

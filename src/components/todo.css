@@ -8,8 +8,13 @@
 
 }
 
+li{
+    display: flex;
+    justify-content: flex-end;
+}
+
 .btn-add{
-    background-color: green;
+    background-color: rgb(134, 246, 134);
     color: white;
     width: 30px;
     height: 30px;
@@ -18,7 +23,8 @@
     
 }
 .btn-done{
-    background-color: rgb(124, 244, 124);
+   
+    background-color: rgb(245, 144, 77);
     color: white;
     width: 50px;
     height: 30px;
