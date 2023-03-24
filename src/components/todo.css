@@ -27,6 +27,7 @@
 }
 
 li{
+    width: 200px;
     list-style-type: none;
     background-color: white;
 

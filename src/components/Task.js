@@ -14,6 +14,7 @@ export default function Task() {
  
 
   const handleOnChange = (e) => {
+    
     setTask(e.target.value)
 
   }
@@ -21,7 +22,7 @@ export default function Task() {
   const submitTodos = (e) => {
     e.preventDefault()
     setDodos([
-      ...todos , {text : task , completed:false}
+      ...todos , {text : task , completed:false , id: Math.random()*200}
     ])
 
 
