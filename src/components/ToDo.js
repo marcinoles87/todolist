@@ -5,7 +5,7 @@ import './todo.css'
 export default function ToDo({todos}) {
 
   const handleRemove = () => {
-    {todos.fillter()}
+    {todos.fillter( todos.id != todos.id)}
   }
 
 
