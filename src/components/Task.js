@@ -24,14 +24,15 @@ export default function Task() {
     setDodos([
       ...todos , {text : task , completed:false , id: Math.random()*200}
     ])
+    setTask('')
 
 
   }
   return (
     <div  className='Task'>
         <h2>Add Task</h2>
-        <input onChange={handleOnChange}></input><button onClick={submitTodos} className='btn-add'>Add</button>
-        <ToDo todos={todos}></ToDo>
+        <input onChange={handleOnChange} value={task}></input><button onClick={submitTodos} className='btn-add'>Add</button>
+        <ToDo todos={todos} key={todos.id}></ToDo>
     </div>
   )
 }
