@@ -1,16 +1,19 @@
 import React, { useState } from 'react'
-import To from './To'
 
 import './todo.css'
 
 export default function ToDo({todos}) {
+
+  const handleRemove = () => {
+    {todos.fillter()}
+  }
 
 
   return (
     <div className='todo'>
       <ul>
       {todos.map( (todo) => {
-        return <li key={todo.id}>{todo.text} <button className='btn-add'>Add</button><button className='btn-done'>Done</button></li>
+        return <li key={todo.id}>{todo.text} <button className='btn-add'>Add</button><button className='btn-done' onClick={handleRemove}>Done</button></li>
       })}
       </ul>
     </div>
