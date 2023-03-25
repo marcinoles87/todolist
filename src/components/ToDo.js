@@ -12,11 +12,11 @@ export default function ToDo({todos , setDodos , task }) {
   )
 
   const handleDone = () => {
+    console.log(todos)
     
-    todos.map( (todo) => {
-      todo.classlist.add('decor')
-    })
-  }
+    const x = document.querySelector('.list-element')
+    x.classList.add('decor')
+  } 
 
 
 
@@ -24,7 +24,7 @@ export default function ToDo({todos , setDodos , task }) {
     <div className='todo'>
       <ul>
       {todos.map( (todo) => {
-        return <li key={todo.id}>{todo.text} <button className='btn-add' onClick={handleDone}>Done</button><button className='btn-done' onClick={handleRemove}>Remove</button></li>
+        return <li className='list-element' key={todo.id}>{todo.text} <button className='btn-add' onClick={handleDone}>Done</button><button className='btn-done' onClick={handleRemove}>Remove</button></li>
       })}
       </ul>
     </div>
