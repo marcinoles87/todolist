@@ -12,6 +12,7 @@ export default function ToDo({todos , setDodos , task }) {
   )
 
   const handleDone = () => {
+    console.log('ok')
     todos.map( (todo) => {
       return todo.style.textDecoration = "line-through"
     })
