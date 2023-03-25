@@ -6,13 +6,14 @@ export default function ToDo({todos , setDodos , task }) {
 
   const handleRemove = () => (
 
-        todos.filter( (todo) => {
-          if(todo.id > 1) {
-            console.log(todo[1].id)
-          }
-
-        })
+     const arrById = todos.filter(filterById)
   )
+
+  const filterById = (item) => {
+    if(item.id !==0) {
+      return true
+    }
+  }
 
   const handleDone = (e) => {
     console.log(todos)
