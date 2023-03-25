@@ -5,7 +5,9 @@ import './todo.css'
 export default function ToDo({todos}) {
 
   const handleRemove = () => {
-    {todos.fillter( todos.id != todos.id)}
+    
+    const removeItem = todos.filter(todo => todo.id)
+    console.log(removeItem)
   }
 
 
