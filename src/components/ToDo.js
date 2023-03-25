@@ -4,17 +4,18 @@ import './todo.css'
 
 export default function ToDo({todos , setDodos , task }) {
 
-  const handleRemove = () => {
+  const handleRemove = (e) => {
     
-    const arrayToDo = todos.map( (todo) => {
-      let x = todo.id
-      if(x === todo.id){
-       
-       arrayToDo.pop()
-      }
+    const id = todos.map( (todo) => {
+      return todo.id
     })
 
-  
+    
+
+    if(e.id === id) {
+      console.log('ok')
+    }
+
   }
 
   return (
