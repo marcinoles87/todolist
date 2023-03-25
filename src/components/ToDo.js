@@ -11,7 +11,7 @@ export default function ToDo({todos , setDodos , task }) {
         
   )
 
-  const handleDone = () => {
+  const handleDone = (e) => {
     console.log(todos)
     
     const x = document.querySelector('.list-element')
