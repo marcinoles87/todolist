@@ -4,14 +4,18 @@ import './todo.css'
 
 export default function ToDo({todos , setDodos , task }) {
 
-  const handleRemove = (
+  const handleRemove = () => (
 
-    useEffect( () => {
+    
         todos.splice(0,1)
-    }, [todos])
-  
-
+        
   )
+
+  const handleDone = () => {
+    todos.map( (todo) => {
+      return todo.style.textDecoration = "line-through"
+    })
+  }
 
 
 
@@ -19,7 +23,7 @@ export default function ToDo({todos , setDodos , task }) {
     <div className='todo'>
       <ul>
       {todos.map( (todo) => {
-        return <li key={todo.id}>{todo.text} <button className='btn-add'>Add</button><button className='btn-done' onClick={handleRemove()}>Done</button></li>
+        return <li key={todo.id}>{todo.text} <button className='btn-add' onClick={handleDone}>Done</button><button className='btn-done' onClick={handleRemove}>Remove</button></li>
       })}
       </ul>
     </div>
