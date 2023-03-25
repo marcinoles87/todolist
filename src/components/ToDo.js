@@ -2,16 +2,20 @@ import React, { useState } from 'react'
 
 import './todo.css'
 
-export default function ToDo({todos}) {
+export default function ToDo({todos , setDodos , task }) {
 
   const handleRemove = () => {
     
-    const removeItem = todos.filter( (todo) => {
-      return todo != todo.id
+    const arrayToDo = todos.map( (todo) => {
+      let x = todo.id
+      if(x === todo.id){
+       
+       arrayToDo.pop()
+      }
     })
-    console.log(removeItem)
-  }
 
+  
+  }
 
   return (
     <div className='todo'>

@@ -32,7 +32,7 @@ export default function Task() {
     <div  className='Task'>
         <h2>Add Task</h2>
         <input onChange={handleOnChange} ></input><button onClick={submitTodos} className='btn-add'>Add</button>
-        <ToDo todos={todos} key={todos.id}></ToDo>
+        <ToDo todos={todos} key={todos.id} setDodos={setDodos} task={task}></ToDo>
     </div>
   )
 }
