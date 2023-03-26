@@ -12,9 +12,9 @@ export default function ToDo({todos , setDodos , task }) {
     
   )
 
-  const filterById = (item) => {
-    if(item.id > 30) {
-      return console.log('ok')
+  const filterById = (item , index) => {
+    if(item.id === todos[index].id ) {
+      return console.log(item)
     }
   }
 
