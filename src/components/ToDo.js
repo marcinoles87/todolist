@@ -4,25 +4,26 @@ import './todo.css'
 
 export default function ToDo({todos , setDodos , task }) {
 
-  const handleRemove = () => (
+  
+  const handleRemove = () => {
 
-   
+    
     todos.filter(filterById)
 
     
-  )
+  }
 
   const filterById = (item , index) => {
-    if(item.id === todos[index].id ) {
-      return console.log(item)
-    }
+    console.log(item)
+    console.log(index)
+    console.log(item.id)
   }
 
 
   
 
-  const handleDone = (e) => {
-    console.log(todos)
+  const handleDone = () => {
+ 
     
     const x = document.querySelector('.list-element')
     x.classList.add('decor')
