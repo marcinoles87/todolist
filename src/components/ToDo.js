@@ -4,17 +4,17 @@ import './todo.css'
 
 export default function ToDo({todos , setDodos , task }) {
 
-
+ 
   
 
   const handleRemove = (item) => {
 
-   
+    
     console.log(todos)
     const index = todos.findIndex( (task,i) => task[i] === item[i] )
     const deleteTask = todos.splice(index , 1)
     console.log(deleteTask)
-
+    
   }
 
 
