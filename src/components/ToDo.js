@@ -4,7 +4,8 @@ import './todo.css'
 
 export default function ToDo({todos , setDodos , task }) {
 
-  
+  const todosId = todos.id
+  console.log(todosId)
 
   const handleRemove = (item) => {
    
