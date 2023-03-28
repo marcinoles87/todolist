@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 
 import './todo.css'
 
@@ -16,7 +16,7 @@ export default function ToDo({todos , setDodos , task ,setTask } ) {
     console.log(deleteTask)
     
     
-    
+    setDodos(index)
     
   }
 
