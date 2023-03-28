@@ -15,8 +15,7 @@ export default function ToDo({todos , setDodos , task ,setTask } ) {
     const deleteTask = todos.splice(index , 1)
     console.log(deleteTask)
     
-    
-    setDodos(index)
+    setDodos(todos)
     
   }
 
