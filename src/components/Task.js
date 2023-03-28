@@ -23,21 +23,17 @@ export default function Task() {
 
   const submitTodos = (e) => {
     e.preventDefault()
-    setDodos([
-      ...todos , {text : task , completed:false , id: Math.random()*200}
+    setDodos([...todos , {text : task , completed:false , id: Math.random()*200}
     ])
 
     setTask('')
     
-    
-
-
   }
   return (
     <div  className='Task'>
         <h2>Add Task</h2>
         <input onChange={handleOnChange} value={task}></input><button onClick={submitTodos} className='btn-add'>Add</button>
-        <ToDo todos={todos} key={todos.id} setDodos={setDodos} task={task} setTask={setTask}></ToDo>
+        <ToDo todos={todos} key={todos.id} setDodos={setDodos} task={task} ></ToDo>
     </div>
   )
 }
