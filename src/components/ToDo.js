@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import './todo.css'
 
-export default function ToDo({todos , setDodos , task }) {
+export default function ToDo({todos , setDodos , task ,setTask }) {
 
  
   
@@ -14,6 +14,8 @@ export default function ToDo({todos , setDodos , task }) {
     const index = todos.findIndex( (task,i) => task[i] === item[i] )
     const deleteTask = todos.splice(index , 1)
     console.log(deleteTask)
+
+    setTask('')
     
   }
 
