@@ -5,7 +5,7 @@ import './todo.css'
 export default function ToDo({todos , setDodos , task ,setTask } ) {
 
   
-  
+  const tsk = props.task
 
   const handleRemove = (item) => {
 

@@ -5,7 +5,7 @@ import './task.css'
 
 
 
-export default function Task() {
+export default function Task(props) {
 
   let [task,setTask] = useState();
   let [todos,setDodos] = useState([])
@@ -14,11 +14,7 @@ export default function Task() {
  
 
   const handleOnChange = (e) => {
-    
-    
     setTask(e.target.value)
-    
-
   }
 
   const submitTodos = (e) => {
