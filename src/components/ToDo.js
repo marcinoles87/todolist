@@ -14,12 +14,12 @@ export default function ToDo({todos , setDodos , task ,setTask } ) {
     const index = todos.findIndex( (task,i) => task[i] === item[i] )
     const deleteTask = todos.splice(index , 1)
     console.log(deleteTask)
-    
     setDodos(todos)
+    document.querySelector('li').classList.add('decor')
     
   }
 
-  const handleDone = () => {
+  const handleDone = (e) => {
  
     
     const x = document.querySelector('.list-element')
