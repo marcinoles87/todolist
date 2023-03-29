@@ -29,7 +29,7 @@ export default function Task(props) {
     <div  className='Task'>
         <h2>Add Task</h2>
         <input onChange={handleOnChange} value={task}></input><button onClick={submitTodos} className='btn-add'>Add</button>
-        <ToDo todos={todos} key={todos.id} setDodos={setDodos} task={task} ></ToDo>
+        <ToDo todos={todos} key={todos.id} setDodos={setDodos} task={task} setTask={setTask}></ToDo>
         
     </div>
   )
