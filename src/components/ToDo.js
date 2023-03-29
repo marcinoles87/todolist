@@ -30,7 +30,7 @@ export default function ToDo({todos , setDodos , task ,setTask } ) {
 
   return (
     <div className='todo'>
-      {task}
+      
       <ul>
       {todos.map( (todo) => {
         return <li className='list-element' key={todo.id}>{todo.text} <button className='btn-add' onClick={handleDone}>Done</button><button className='btn-done' onClick={handleRemove}>Remove</button></li>
