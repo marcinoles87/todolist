@@ -8,11 +8,16 @@ export default function ToDo({todos , setDodos , task ,setTask } ) {
   let [checked , setChecked] = useState(false)
   
   let [removeItem , setRemoveItem] = useState('')
-  const handleRemove = (item) => {
 
+  const clicker = (e) => {
+    console.log('wybrano ' + e.target.checked)
+  }
+
+  const handleRemove = (e) => {
     
-    console.log(todos)
-    const index = todos.findIndex( (task,i) => task[i] === item[i] )
+    console.log(e.target.value)
+    const index = todos.findIndex( (item,i) => item === task)
+    console.log(index)
     const deleteTask = todos.splice(index , 1)
     console.log(deleteTask)
     setDodos(todos)
@@ -37,7 +42,7 @@ export default function ToDo({todos , setDodos , task ,setTask } ) {
       
       <ul>
       {todos.map( (todo) => {
-        return <li className='list-element' key={todo.id} >{todo.text} <button className='btn-add' onClick={handleDone}>Done</button><button className='btn-done' onClick={handleRemove}>Remove</button></li>
+        return <li className='list-element' key={todo.id} >{todo.text} <button className='btn-add' onClick={handleDone}>Done</button><button className='btn-done' onClick={handleRemove} value={todo.id}>Remove</button></li>
       })}
       </ul>
 
