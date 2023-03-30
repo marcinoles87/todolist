@@ -16,7 +16,8 @@ export default function ToDo({todos , setDodos , task ,setTask } ) {
   const handleRemove = (e) => {
     
     console.log(e.target.value)
-    const index = todos.findIndex( (item,i) => item === task)
+    const idElement = e.target.value
+    const index = todos.findIndex( (id,i) => id[i] === idElement)
     console.log(index)
     const deleteTask = todos.splice(index , 1)
     console.log(deleteTask)
