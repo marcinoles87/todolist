@@ -1,7 +1,8 @@
 import React from 'react'
 
 export default function RemoveElement(props) {
+  const {removeItem} = props
   return (
-    <div>{props.checked ? 'dziala' : 'false'}</div>
+    <div>{props.checked ? '' : 'false'}</div>
   )
 }

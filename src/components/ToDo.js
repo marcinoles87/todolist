@@ -16,6 +16,7 @@ export default function ToDo({todos , setDodos , task ,setTask } ) {
     const deleteTask = todos.splice(index , 1)
     console.log(deleteTask)
     setDodos(todos)
+    setRemoveItem(deleteTask)
     document.querySelector('li').classList.add('decor')
     
   }
@@ -40,7 +41,7 @@ export default function ToDo({todos , setDodos , task ,setTask } ) {
       })}
       </ul>
 
-      <RemoveElement checked={checked} ></RemoveElement>
+      <RemoveElement checked={checked} removeItem={removeItem}></RemoveElement>
 
       
     </div>
