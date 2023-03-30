@@ -4,7 +4,7 @@ import './todo.css'
 
 export default function ToDo({todos , setDodos , task ,setTask } ) {
 
-  
+  let [checked , setChecked] = useState(false)
   
 
   const handleRemove = (item) => {
@@ -20,10 +20,12 @@ export default function ToDo({todos , setDodos , task ,setTask } ) {
   }
 
   const handleDone = (e) => {
- 
-    
-    const x = document.querySelector('.list-element')
-    x.classList.add('decor')
+        const x = document.querySelector('.list-element')
+    setChecked(
+    checked = !checked ,
+    checked ? x.classList.add('decor') : null
+    )
+   
   } 
 
 
@@ -33,7 +35,7 @@ export default function ToDo({todos , setDodos , task ,setTask } ) {
       
       <ul>
       {todos.map( (todo) => {
-        return <li className='list-element' key={todo.id}>{todo.text} <button className='btn-add' onClick={handleDone}>Done</button><button className='btn-done' onClick={handleRemove}>Remove</button></li>
+        return <li className='list-element' key={todo.id} >{todo.text} <button className='btn-add' onClick={handleDone}>Done</button><button className='btn-done' onClick={handleRemove}>Remove</button></li>
       })}
       </ul>
 
