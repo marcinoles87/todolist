@@ -1,4 +1,5 @@
 import React, {  useState } from 'react'
+import RemoveElement from './RemoveElement'
 
 import './todo.css'
 
@@ -6,7 +7,7 @@ export default function ToDo({todos , setDodos , task ,setTask } ) {
 
   let [checked , setChecked] = useState(false)
   
-
+  let [removeItem , setRemoveItem] = useState('')
   const handleRemove = (item) => {
 
     
@@ -38,6 +39,8 @@ export default function ToDo({todos , setDodos , task ,setTask } ) {
         return <li className='list-element' key={todo.id} >{todo.text} <button className='btn-add' onClick={handleDone}>Done</button><button className='btn-done' onClick={handleRemove}>Remove</button></li>
       })}
       </ul>
+
+      <RemoveElement checked={checked} ></RemoveElement>
 
       
     </div>
