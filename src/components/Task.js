@@ -45,7 +45,10 @@ export default function Task(props) {
         <input onChange={handleOnChange}></input><button onClick={submitTodos}>Add Task</button>
         
         <ul>
-          <List id={id} task={task} todos={todos}></List>
+          {todos.map( (todo) => {
+            return <List id={todo.id} task={todo.text} ></List>
+          })}
+          
         </ul>
         
       
