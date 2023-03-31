@@ -9,6 +9,7 @@ export default function Task(props) {
 
   let [task,setTask] = useState();
   let [todos,setDodos] = useState([])
+  let [ide , setId] = useState()
 
 
  
@@ -16,12 +17,13 @@ export default function Task(props) {
 
   const handleOnChange = (e) => {
     setTask(e.target.value)
+    setId(Math.floor(Math.random()*200))
 
   }
 
   const submitTodos = (e) => {
     e.preventDefault()
-    setDodos([...todos , {text : task , completed:false , id: Math.random()*200}
+    setDodos([...todos , {text : task , completed:false , id: ide}
     ])
 
     setTask('')
@@ -34,7 +36,7 @@ export default function Task(props) {
     <div  className='Task'>
         <h2>Add Task</h2>
         <input onChange={handleOnChange} value={task}></input><button onClick={submitTodos} className='btn-add'>Add</button>
-        <ToDo todos={todos} key={todos.id} setDodos={setDodos} task={task} setTask={setTask} id={todos.id}></ToDo>
+        <ToDo todos={todos} key={todos.id} setDodos={setDodos} task={task} setTask={setTask} id={ide}></ToDo>
         
     </div>
   )

@@ -3,29 +3,30 @@ import RemoveElement from './RemoveElement'
 
 import './todo.css'
 
-export default function ToDo({todos , setDodos , task ,setTask } ) {
+export default function ToDo({todos , setDodos , task ,setTask ,id } ) {
 
   let [checked , setChecked] = useState(false)
   
   let [removeItem , setRemoveItem] = useState('')
 
-  const clicker = (e) => {
-    console.log('wybrano ' + e.target.checked)
-  }
+ 
 
   const handleRemove = (e) => {
     
     console.log(e.target.value)
     const idElement = e.target.value
-    const index = todos.findIndex( (id,i) => id[i] === idElement)
-    console.log(index)
+    if(idElement === id){console.log('dziala')}
+    const index = todos.findIndex( (todo,i) => todo.id === idElement)
     const deleteTask = todos.splice(index , 1)
-    console.log(deleteTask)
+    
     setDodos(todos)
     setRemoveItem(deleteTask)
     document.querySelector('li').classList.add('decor')
+
     
   }
+
+
 
   const handleDone = (e) => {
         const x = document.querySelector('.list-element')
