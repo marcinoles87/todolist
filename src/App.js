@@ -1,13 +1,18 @@
 import Task from './components/Task';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-    <h1>Marcin To Do App</h1>
-    <Task></Task>
-    </div>
-  );
+import React, { Component } from 'react'
+
+export default class App extends Component {
+
+  
+
+  render() {
+    return (
+      <div className='App'>
+        <Task></Task>
+      </div>
+    )
+  }
 }
 
-export default App;
