@@ -4,12 +4,14 @@ import './todo.css'
 
 export default function OneTask(props) {
 
-  const keyLi = Math.random()*100
-  const task = props.task
+  const {task , id} = props
+  
+  
   console.log(props.id)
+
   return (
     <>
-        <li key={keyLi}> {task}</li><button className='btn-done'>Done</button><button className='btn-remove'>Remove</button>
+        <li key={id}> {task}</li><button className='btn-done'>Done</button><button className='btn-remove'>Remove</button>
     </>
   )
 }
