@@ -3,7 +3,7 @@ import OneTask from './OneTask'
 
 export default function List(props) {
   return (
-    <div>
+    <div className='todo'>
         
         <OneTask  task={props.task} id={props.id}></OneTask>
         

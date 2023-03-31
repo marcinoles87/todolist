@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import ToDo from './ToDo'
+
 
 import './task.css'
+
 import List from './List';
 
 
@@ -34,6 +35,10 @@ export default function Task(props) {
       id: id
     }])
 
+    setTask(
+      task = ''
+    )
+
     
     
   }
@@ -46,7 +51,7 @@ export default function Task(props) {
         
         <ul >
           {todos.map( (todo) => {
-            return <List id={todo.id} task={todo.text} ></List>
+            return <List key={todo.id} id={todo.id} task={todo.text}  ></List>
           })}
           
         </ul>
