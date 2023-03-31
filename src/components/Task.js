@@ -16,8 +16,6 @@ export default function Task(props) {
     setTask(
       task = e.target.value
     )
-
-    console.log(task)
  }
 
   const submitTodos = (e) => {
@@ -44,6 +42,9 @@ export default function Task(props) {
     <div  className='Task'>
         <h2>Add Task</h2>
         <input onChange={handleOnChange}></input><button onClick={submitTodos}>Add Task</button>
+        {todos.map( todo => <li> {todo.task} and  {todo.id}</li> )
+      }
+        
     </div>
   )
 }
