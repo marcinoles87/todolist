@@ -1,10 +1,13 @@
 import React from 'react'
 import OneTask from './OneTask'
 
-export default function List() {
+export default function List(props) {
   return (
     <div>
-        <OneTask></OneTask>
+        <OneTask task={props.task} id={props.id}></OneTask>
+        <OneTask task={props.task} id={props.id}></OneTask>
+        <OneTask task={props.task} id={props.id}></OneTask>
+        <OneTask task={props.task} id={props.id}></OneTask>
     </div>
   )
 }

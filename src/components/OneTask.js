@@ -1,10 +1,9 @@
 import React from 'react'
 
-export default function 
-() {
+export default function OneTask(props) {
   return (
     <div>
-        <li>Hey</li>
+        <li>{props.task} i {props.id}</li>
     </div>
   )
 }
