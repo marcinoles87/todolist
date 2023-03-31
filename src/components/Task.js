@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import ToDo from './ToDo'
 
 import './task.css'
+import List from './List';
 
 
 
 export default function Task(props) {
 
   let [task, setTask] = useState('');
-  let [todos , setTodos] = useState('');
+  let [todos , setTodos] = useState([]);
   let [id , setId] = useState();
 
 
@@ -30,8 +31,8 @@ export default function Task(props) {
 
     setTodos([...todos , { 
       text : task , 
-      id: id}
-    ])
+      id: id
+    }])
 
     
     
@@ -42,8 +43,13 @@ export default function Task(props) {
     <div  className='Task'>
         <h2>Add Task</h2>
         <input onChange={handleOnChange}></input><button onClick={submitTodos}>Add Task</button>
-        {todos.map( todo => <li> {todo.task} and  {todo.id}</li> )
-      }
+        
+        <ul>
+          <List></List>
+        </ul>
+        
+      
+      
         
     </div>
   )
