@@ -8,15 +8,17 @@
 
 }
 
+button{}
+
 li{
     display: flex;
     justify-content: flex-end;
 }
 
-.btn-add{
+.btn-remove{
     background-color: rgb(134, 246, 134);
     color: white;
-    width: 30px;
+    width: auto;
     height: 30px;
     border: none;
     

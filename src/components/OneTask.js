@@ -9,7 +9,7 @@ export default function OneTask(props) {
   console.log(props.id)
   return (
     <>
-        <li key={keyLi}> {task}</li><button className='btn-done'>Done</button>
+        <li key={keyLi}> {task}</li><button className='btn-done'>Done</button><button className='btn-remove'>Remove</button>
     </>
   )
 }
