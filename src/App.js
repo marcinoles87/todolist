@@ -3,6 +3,8 @@ import './App.css';
 
 import React, { Component } from 'react'
 
+import TaskDone from './components/TaskDone';
+
 export default class App extends Component {
 
   
@@ -11,6 +13,7 @@ export default class App extends Component {
     return (
       <div className='App'>
         <Task></Task>
+        <TaskDone></TaskDone>
       </div>
     )
   }
