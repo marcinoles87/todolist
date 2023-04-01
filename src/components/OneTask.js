@@ -10,6 +10,11 @@ export default function OneTask(props) {
   console.log(e.target.value)
   console.log(e.target.id)
   
+  if(e.target.value === task){
+    console.log('dziala')
+  }
+
+  const index = todos.findIndex()
   
  }
 
