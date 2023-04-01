@@ -49,7 +49,7 @@ export default function Task(props) {
         
         <ul >
           {todos.map( (todo) => {
-            return <List key={todo.id} id={todo.id} task={todo.text} todos={todos} ></List>
+            return <List key={todo.id} id={todo.id} task={todo.text} todos={todos} setTodos={setTodos} todo={todo}></List>
           })}
           
         </ul>

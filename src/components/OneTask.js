@@ -6,22 +6,19 @@ export default function OneTask(props) {
 
   
 
-  const {task , id , todos} = props
+  const {task , id , todos , setTodos , todo} = props
   
  const handleRemove = (e) => {
-  console.log(e.target.value)
-  console.log(e.target.id)
+
+  // console.log(e.target.value)
+  // console.log(e.target.id)
   
-  if(e.target.value === task){
-    console.log('dziala')
-  }
+  // if(e.target.value === task){
+  //   console.log('dziala')
+  // }
 
   
-  console.log(todos)
-  const index = todos.findIndex( (todo) => todo.id  >50 )
-  console.log(index)
-  const element = todos[index]
-  console.log(element)
+  setTodos( todos.filter( el => el.id !== todo.id))
   
  }
 

@@ -5,7 +5,7 @@ export default function List(props) {
   return (
     <div className='todo'>
         
-        <OneTask  task={props.task} id={props.id} todos={props.todos}></OneTask>
+        <OneTask  task={props.task} id={props.id} todos={props.todos} setTodos={props.setTodos} todo={props.todo}></OneTask>
         
     </div>
   )
