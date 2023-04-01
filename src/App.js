@@ -13,7 +13,7 @@ export default class App extends Component {
     return (
       <div className='App'>
         <Task></Task>
-        <TaskDone></TaskDone>
+        <TaskDone task={this.props.task}></TaskDone>
       </div>
     )
   }

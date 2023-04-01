@@ -12,6 +12,7 @@ export default function Task(props) {
   let [task, setTask] = useState('');
   let [todos , setTodos] = useState([]);
   let [id , setId] = useState();
+  let [done, setDone] =useState([])
 
 
  const handleOnChange = (e) => {
@@ -32,7 +33,8 @@ export default function Task(props) {
 
     setTodos([...todos , { 
       text : task , 
-      id: id
+      id: id , 
+      completed : false
     }])
 
     setTask(

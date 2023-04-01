@@ -6,7 +6,7 @@
 .App{
 
   text-align: center;
-  background: linear-gradient(to right ,orange , yellow)
+  background: linear-gradient(to right ,rgb(255, 169, 9) , rgb(0, 92, 113))
 
   
 }
