@@ -4,6 +4,8 @@ import './todo.css'
 
 export default function OneTask(props) {
 
+  
+
   const {task , id , todos} = props
   
  const handleRemove = (e) => {
@@ -14,9 +16,13 @@ export default function OneTask(props) {
     console.log('dziala')
   }
 
-  const index = todos.findIndex()
+  
+  console.log(todos)
+//   const index = todos.findIndex( (todo) => todo.id === e.target.id)
+//   console.log(index)
   
  }
+
 
   return (
     <>
