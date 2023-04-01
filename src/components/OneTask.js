@@ -18,8 +18,10 @@ export default function OneTask(props) {
 
   
   console.log(todos)
-//   const index = todos.findIndex( (todo) => todo.id === e.target.id)
-//   console.log(index)
+  const index = todos.findIndex( (todo) => todo.id  >50 )
+  console.log(index)
+  const element = todos[index]
+  console.log(element)
   
  }
 
