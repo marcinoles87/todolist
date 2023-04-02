@@ -35,7 +35,7 @@ export default function Task(props) {
     setTodos([...todos , { 
       text : task , 
       id: id , 
-      completed : true,
+      completed : false,
       date : Date().slice(7)
     }])
 
