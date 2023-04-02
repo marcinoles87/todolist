@@ -13,6 +13,7 @@ export default function Task(props) {
   let [todos , setTodos] = useState([]);
   let [id , setId] = useState();
   
+  
 
 
  const handleOnChange = (e) => {
@@ -30,13 +31,11 @@ export default function Task(props) {
 
     console.log(id)
 
-  
-  
 
     setTodos([...todos , { 
       text : task , 
       id: id , 
-      completed : false,
+      completed : true,
       date : Date().slice(7)
     }])
 
@@ -47,17 +46,22 @@ export default function Task(props) {
   }
 
 
+ 
+
   return (
     <div  className='Task'>
         <h2>Add Task</h2>
         <input onChange={handleOnChange} value={task}></input><button onClick={submitTodos}>Add Task</button>
         
-        <ul >
+        <ul>
           {todos.map( (todo) => {
-            return <List key={todo.id} id={todo.id} task={todo.text} todos={todos} setTodos={setTodos} todo={todo} date={todo.date}></List>
+            return <List key={todo.id} id={todo.id} task={todo.text} todos={todos} setTodos={setTodos} todo={todo} date={todo.date} completed={todo.completed}></List>
           })}
           
         </ul>
+
+        <h1> Done Task</h1>
+        
         
       
       
