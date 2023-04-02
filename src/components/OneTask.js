@@ -21,13 +21,18 @@ export default function OneTask(props) {
   if(item.id === todo.id){
    return { 
     ...item ,
-    completed : !item.completed
+    completed : !item.completed,
+
+  
   }
+
+  
   }
   return item
-  
+ 
  }))
 
+ 
  }
  
 

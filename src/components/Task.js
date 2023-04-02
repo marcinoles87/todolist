@@ -12,7 +12,7 @@ export default function Task(props) {
   let [task, setTask] = useState('');
   let [todos , setTodos] = useState([]);
   let [id , setId] = useState();
-  let [done, setDone] =useState([])
+  
 
 
  const handleOnChange = (e) => {
