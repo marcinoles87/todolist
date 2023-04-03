@@ -6,7 +6,7 @@ export default function OneTask(props) {
 
   
 
-  const {task , id , todos , setTodos , todo , date , completed} = props
+  const {task , id , todos , setTodos , todo , date , completed , setCompleted} = props
 
 console.log(completed)
  
@@ -19,13 +19,13 @@ console.log(completed)
 
  const handleDone = (e) => {
 
+ setCompleted(
   completed = !completed
-  console.log(todos.completed)
-  setTodos(todos.map( item => item.completed !==todo.completed))
+ )
   
   
  }
- 
+
 
   return (
     <>
