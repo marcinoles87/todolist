@@ -1,12 +1,13 @@
+import { useState } from 'react' 
 import React from 'react'
 
 import './todo.css'
 
 export default function OneTask(props) {
 
-  
+  let [completed , setCompleted] = useState(false)
 
-  const {task , id , todos , setTodos , todo , date , completed , setCompleted} = props
+  const {task , id , todos , setTodos , todo , date } = props
 
 console.log(completed)
  
@@ -19,6 +20,7 @@ console.log(completed)
 
  const handleDone = (e) => {
 
+  
  setCompleted(
   completed = !completed
  )
