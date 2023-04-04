@@ -21,9 +21,14 @@ console.log(completed)
  const handleDone = (e) => {
 
   
- setCompleted(
-  completed = !completed
+ setCompleted( completed = !completed
  )
+
+ setTodos( todos.filter( element => element.completed !== completed).map( elementComplete => (
+  <li>
+    {elementComplete}
+  </li>
+ ) ) )
   
   
  }
@@ -31,6 +36,7 @@ console.log(completed)
 
   return (
     <>
+        
         <li key={id}> {task}</li><button className='btn-done' onClick={handleDone} id={id} value={completed}>Done</button><button id={id} value={task} onClick={handleRemove} className='btn-remove'>Remove</button>
     </>
   )
