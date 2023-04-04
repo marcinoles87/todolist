@@ -7,10 +7,10 @@ export default function OneTask(props) {
 
   
 
-  const {task , id , todos , setTodos , todo  } = props
+  const {task , id , todos , setTodos , todo } = props
 
 
- 
+
   
  const handleRemove = (e) => {
 
@@ -20,16 +20,16 @@ export default function OneTask(props) {
 
  const handleDone = (e) => {
 
-  console.log(todo.completed)
-//  setTodos( todo.completed !== todo.completed)
+ const el = todos.map(el => el.completed ===e.completed)
+ console.log(el)
 
- 
  }
+
 
   return (
     <>
         
-        <li key={id}> {task}</li><button className='btn-done' onClick={handleDone} id={id} value={completed}>Done</button><button id={id} value={task} onClick={handleRemove} className='btn-remove'>Remove</button>
+        <li key={id}> {task}</li><button className='btn-done' onClick={handleDone} id={id} >Done</button><button id={id} value={task} onClick={handleRemove} className='btn-remove'>Remove</button>
 
     </>
   )
