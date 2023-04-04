@@ -5,11 +5,11 @@ import './todo.css'
 
 export default function OneTask(props) {
 
-  let [completed , setCompleted] = useState(false)
+  
 
-  const {task , id , todos , setTodos , todo , date } = props
+  const {task , id , todos , setTodos , todo  } = props
 
-console.log(completed)
+
  
   
  const handleRemove = (e) => {
@@ -20,24 +20,17 @@ console.log(completed)
 
  const handleDone = (e) => {
 
-  
- setCompleted( completed = !completed
- )
+  console.log(todo.completed)
+//  setTodos( todo.completed !== todo.completed)
 
- setTodos( todos.filter( element => element.completed !== completed).map( elementComplete => (
-  <li>
-    {elementComplete}
-  </li>
- ) ) )
-  
-  
+ 
  }
-
 
   return (
     <>
         
         <li key={id}> {task}</li><button className='btn-done' onClick={handleDone} id={id} value={completed}>Done</button><button id={id} value={task} onClick={handleRemove} className='btn-remove'>Remove</button>
+
     </>
   )
 }
