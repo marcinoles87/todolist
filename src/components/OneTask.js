@@ -21,20 +21,10 @@ export default function OneTask(props) {
 
   const val = e.target.value
   console.log(val)
-  const index = todos.indexOf.call(val)
-  console.log(index)
-  if(val === task){
-    
-   
-    
-  }
-  else(console.log('nie'))
+  console.log(task)
 
- 
+
  }
-
-
-
   return (
     <>
         
