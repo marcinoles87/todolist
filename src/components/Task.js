@@ -29,8 +29,6 @@ export default function Task(props) {
       id = Math.floor(Math.random()*100)
     )
 
-    console.log(id)
-
 
     setTodos([...todos , { 
       text : task , 
@@ -51,13 +49,6 @@ export default function Task(props) {
 
   }
 
-  
- const doneText = document.querySelector('.done')
- console.log(doneText)
-
- const text = 'sss'
-
- doneText.textContent = text
 
   return (
     <div  className='Task'>

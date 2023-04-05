@@ -25,6 +25,8 @@ export default function OneTask(props) {
  const elDone = todos.slice(0,1)
  console.log(elDone)
 
+ 
+
  }
 
 
