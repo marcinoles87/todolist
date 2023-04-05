@@ -21,7 +21,8 @@ export default function OneTask(props) {
  const handleDone = (e) => {
 
  const el = todos.map(el => el.completed ===e.completed)
- console.log(el)
+ const elDone = todos.slice(0,1)
+ console.log(elDone)
 
  }
 

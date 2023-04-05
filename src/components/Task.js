@@ -51,13 +51,6 @@ export default function Task(props) {
 
   }
 
-
-
-
-
-
- 
-
   return (
     <div  className='Task'>
         <h2>Add Task</h2>
@@ -72,8 +65,6 @@ export default function Task(props) {
 
         <h1> Done Task</h1>
           {completed ? "cos kest" : "brak elementow ukonczonych"}
-      
-      
       
         
     </div>
