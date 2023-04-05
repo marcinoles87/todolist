@@ -23,6 +23,12 @@ export default function OneTask(props) {
  console.log(todos)
  const el = todos.map(el => el.completed ===!e.completed)
  const done = todos.find( doneEl => doneEl !== false)
+ const newTab = todos.forEach(element => { 
+  element.completed = true
+  
+ });
+
+ console.log(newTab)
  console.log(done)
 
  console.log(el)
