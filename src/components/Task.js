@@ -12,7 +12,7 @@ export default function Task(props) {
   let [task, setTask] = useState('');
   let [todos , setTodos] = useState([]);
   let [id , setId] = useState();
-  let [completed , setCompleted] = useState(false)
+  
  
 
 
@@ -33,7 +33,6 @@ export default function Task(props) {
     setTodos([...todos , { 
       text : task , 
       id: id , 
-      completed ,
       date : Date().slice(7)
     }])
 
@@ -53,13 +52,13 @@ export default function Task(props) {
         
         <ul>
           {todos.map( (todo) => {
-            return <List key={todo.id} id={todo.id} task={todo.text} todos={todos} setTodos={setTodos} todo={todo} date={todo.date} setCompleted={setCompleted} ></List>
+            return <List key={todo.id} id={todo.id} task={todo.text} todos={todos} setTodos={setTodos} todo={todo} date={todo.date}  ></List>
           })}
           
         </ul>
 
         <h1 className='done'> Done Task</h1>
-          {completed ? "true" : "brak elementow ukonczonych"}
+          
       
         
     </div>

@@ -7,9 +7,7 @@ export default function OneTask(props) {
 
   
 
-  const {task , id , todos , setTodos , todo , completed, setCompleted} = props
-
-
+  const {task , id , todos , setTodos , todo } = props
 
   
  const handleRemove = (e) => {
@@ -20,22 +18,17 @@ export default function OneTask(props) {
 
  const handleDone = (e) => {
 
- console.log(todos)
- const el = todos.map(el => el.completed ===!e.completed)
- const done = todos.find( doneEl => doneEl !== false)
- const newTab = todos.forEach(element => { 
-  element.completed = true
-  
- });
 
- console.log(newTab)
- console.log(done)
-
- console.log(el)
-
- setCompleted( (prev => !prev)
-  
- )
+  const val = e.target.value
+  console.log(val)
+  const index = todos.indexOf.call(val)
+  console.log(index)
+  if(val === task){
+    
+   
+    
+  }
+  else(console.log('nie'))
 
  
  }
@@ -45,8 +38,8 @@ export default function OneTask(props) {
   return (
     <>
         
-        <li key={id}> {task}</li><button className='btn-done' onClick={handleDone} id={id} >Done</button><button id={id} value={task} onClick={handleRemove} className='btn-remove'>Remove</button>
-
+        <li key={id}> {task}</li><button className='btn-done' onClick={handleDone} id={id} value={task}>Done</button><button id={id}  onClick={handleRemove} className='btn-remove'>Remove</button>
+      
     </>
   )
 }
