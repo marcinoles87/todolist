@@ -21,9 +21,11 @@ export default function OneTask(props) {
  const handleDone = (e) => {
 
  console.log(todos)
- const el = todos.map(el => el.completed ===e.completed)
- const elDone = todos.slice(0,1)
- console.log(elDone)
+ const el = todos.map(el => el.completed ===!e.completed)
+ const done = todos.find( doneEl => doneEl !== false)
+ console.log(done)
+
+ console.log(el)
 
  setCompleted( (prev => !prev)
   
