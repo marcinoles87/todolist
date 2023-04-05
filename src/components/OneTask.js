@@ -22,15 +22,10 @@ export default function OneTask(props) {
   const val = e.target.value
 
   const index = (element => element.text === val)
-  const indexDone = todos.findIndex(index)
+  const indexDone = todos.findIndex(index)   // znaleziony index 
   const cutElement = todos.splice(indexDone,1)
-  console.log(cutElement)
+  console.log(cutElement)  //wyciety element z tablicy o danym indexie
   
-  
-  
-  
-
-
 
  }
   return (
