@@ -22,9 +22,11 @@ export default function OneTask(props) {
   const val = e.target.value
 
   const index = (element => element.text === val)
-  console.log(todos.findIndex(index))
-  console.log(task)
-  console.log(todos)
+  const indexDone = todos.findIndex(index)
+  const cutElement = todos.splice(indexDone,1)
+  console.log(cutElement)
+  
+  
   
   
 
