@@ -20,8 +20,14 @@ export default function OneTask(props) {
 
 
   const val = e.target.value
-  console.log(val)
+
+  const index = (element => element.text === val)
+  console.log(todos.findIndex(index))
   console.log(task)
+  console.log(todos)
+  
+  
+
 
 
  }
