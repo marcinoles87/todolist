@@ -51,6 +51,14 @@ export default function Task(props) {
 
   }
 
+  
+ const doneText = document.querySelector('.done')
+ console.log(doneText)
+
+ const text = 'sss'
+
+ doneText.textContent = text
+
   return (
     <div  className='Task'>
         <h2>Add Task</h2>
@@ -63,7 +71,7 @@ export default function Task(props) {
           
         </ul>
 
-        <h1> Done Task</h1>
+        <h1 className='done'> Done Task</h1>
           {completed ? "cos kest" : "brak elementow ukonczonych"}
       
         
