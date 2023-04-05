@@ -41,11 +41,7 @@ export default function Task(props) {
       task = ''
     )
 
-    if(todos.length > 2) {
-      setCompleted(
-        completed = true
-      )
-    }
+    
 
   }
 
@@ -63,7 +59,7 @@ export default function Task(props) {
         </ul>
 
         <h1 className='done'> Done Task</h1>
-          {completed ? "cos kest" : "brak elementow ukonczonych"}
+          {completed ? "true" : "brak elementow ukonczonych"}
       
         
     </div>

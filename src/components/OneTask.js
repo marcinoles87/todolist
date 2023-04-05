@@ -7,7 +7,7 @@ export default function OneTask(props) {
 
   
 
-  const {task , id , todos , setTodos , todo } = props
+  const {task , id , todos , setTodos , todo , completed, setCompleted} = props
 
 
 
@@ -25,8 +25,11 @@ export default function OneTask(props) {
  const elDone = todos.slice(0,1)
  console.log(elDone)
 
- 
+ setCompleted( (prev => !prev)
+  
+ )
 
+ 
  }
 
 
