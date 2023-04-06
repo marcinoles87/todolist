@@ -7,8 +7,10 @@ export default function OneTask(props) {
 
   
 
-  const {task , id , todos , setTodos , todo } = props
+  const {task , id , todos , setTodos , todo ,done, setDone} = props
 
+  
+const newArr = []
   
  const handleRemove = (e) => {
 
@@ -23,17 +25,22 @@ export default function OneTask(props) {
 
   const index = (element => element.text === val)
   const indexDone = todos.findIndex(index)   // znaleziony index 
-  setTodos(todos.splice(indexDone,1))
-    //wyciety element z tablicy o danym indexie
+  const cutElement = todos.splice(indexDone,1)
+  console.log(cutElement)  //wyciety element z tablicy o danym indexie
   
-
+  const newA = newArr.push(cutElement)
+  console.log(newArr)
+  setDone({
+    done
+  })
 
  }
+
   return (
     <>
         
         <li key={id}> {task}</li><button className='btn-done' onClick={handleDone} id={id} value={task}>Done</button><button id={id}  onClick={handleRemove} className='btn-remove'>Remove</button>
-      
+       
     </>
   )
 }
