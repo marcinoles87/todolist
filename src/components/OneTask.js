@@ -28,13 +28,13 @@ const newArr = []
   const cutElement = todos.splice(indexDone,1)
   console.log(cutElement)  //wyciety element z tablicy o danym indexie
   
-  const newA = newArr.push(cutElement)
-  console.log(newArr)
+  done.push(cutElement)
+  console.log(done)
   
     setDone([...done , { 
       text : task , 
       id: id , 
-      
+      date : Date(),
       
     }])
 

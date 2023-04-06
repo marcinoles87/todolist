@@ -60,7 +60,12 @@ console.log(done)
         </ul>
 
         <h1 className='done'> Done Task</h1>
-          <p>{done.text}</p>
+        <ul>
+          {done.map( (dn) => {
+            return <li key={dn.id}>zadanie zakonczone : {dn.text}  </li>
+          })}
+
+          </ul>
       
         
     </div>
