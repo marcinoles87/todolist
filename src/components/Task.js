@@ -46,7 +46,7 @@ export default function Task(props) {
 
   }
 
-
+console.log(done)
   return (
     <div  className='Task'>
         <h2>Add Task</h2>
@@ -60,9 +60,7 @@ export default function Task(props) {
         </ul>
 
         <h1 className='done'> Done Task</h1>
-          {done.map( () => {
-            <List></List>
-          })}
+          <p>{done.text}</p>
       
         
     </div>
