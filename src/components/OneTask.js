@@ -30,9 +30,14 @@ const newArr = []
   
   const newA = newArr.push(cutElement)
   console.log(newArr)
-  setDone({
-    done
-  })
+  
+    setDone([...done , { 
+      text : task , 
+      id: id , 
+      
+      
+    }])
+
 
  }
 

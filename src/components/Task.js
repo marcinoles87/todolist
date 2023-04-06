@@ -60,9 +60,9 @@ export default function Task(props) {
         </ul>
 
         <h1 className='done'> Done Task</h1>
-          {/* {done.map ( (dn) =>{
-            return <li>{dn}</li>
-          })} */}
+          {done.map( () => {
+            <List></List>
+          })}
       
         
     </div>
